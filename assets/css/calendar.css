@@ -1,0 +1,98 @@
+.calendar-wrapper {
+  background-color: black;
+  border-radius: 10px;
+  max-height: 500px;
+}
+
+.calendar-wrapper p,
+.calendar-wrapper ul,
+.calendar-wrapper li {
+  color: white;
+}
+
+.current-date p {
+  color: white;
+}
+
+.icons {
+  color: black;
+}
+
+.calendar {
+  padding: 20px;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  position: relative;
+  width: calc(100% / 7);
+}
+
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.days li:hover::before {
+  background: grey;
+}
+
+.calendar .days li {
+  cursor: pointer;
+  margin-top: 30px;
+  z-index: 1;
+}
+.calendar .weeks li {
+  font-weight: 500;
+}
+
+.calendar-wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px 10px;
+}
+
+.days li.inactive {
+  color: grey;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li.active::before {
+  background-color: purple;
+}
+
+header .current-date {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+header .icons i {
+  height: 28px;
+  width: 28px;
+  margin: 0 1px;
+  text-align: center;
+  cursor: pointer;
+  line-height: 28px;
+  background: #f2f2f2;
+  border-radius: 50%;
+}
+
+header .icons i:hover {
+  background-color: grey;
+}
